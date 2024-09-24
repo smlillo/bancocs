@@ -3,7 +3,7 @@ try {
 
     $user = "root";
     $password = "";
-    $dbname = "formulario";
+    $dbname = "bancocs";
     $dsn = "mysql:host=localhost;dbname=$dbname";
     $dbh = new PDO($dsn, $user, $password);
 } catch (PDOException $e) {
