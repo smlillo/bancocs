@@ -21,8 +21,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $dni = $_POST['dni'];
     $nacionalidad = $_POST['nacionalidad'];
     $genero = $_POST['genero'];
-    $embarazada = $_POST['embarazada'];
-    $jubilado = $_POST['jubilado'];
+    $embarazada = isset($_POST['embarazada']) && $_POST['embarazada'] === 'Si';
+    $jubilado = isset($_POST['jubilado']) && $_POST['jubilado'] === 'Si';
 
     if (isset($_POST['discapacidadCheckbox'])) {
         $discapacidadesSeleccionadas = [];
