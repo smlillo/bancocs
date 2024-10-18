@@ -1,11 +1,25 @@
 <?php
-try {
 
-    $user = "root";
-    $password = "";
-    $dbname = "bancocs";
-    $dsn = "mysql:host=localhost;dbname=$dbname";
-    $dbh = new PDO($dsn, $user, $password);
+try {
+    $isLocal = true;
+
+    if($isLocal)
+    {
+        $user = "root";
+        $password = "";
+        $dbname = "bancocs";
+        $dsn = "mysql:host=localhost;dbname=$dbname";
+        $dbh = new PDO($dsn, $user, $password);
+    }
+    else
+    {
+        $user = "u162761277_bancocs";
+        $password = "RTXV^e#v6";
+        $dbname = "u162761277_bancocs";
+        $dsn = "mysql:host=localhost;dbname=$dbname";
+        $dbh = new PDO($dsn, $user, $password);
+        
+    }
 } catch (PDOException $e) {
     echo $e->getMessage();
 }
