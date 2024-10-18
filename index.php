@@ -1,7 +1,7 @@
 <?php
 
 try {
-    $isLocal = true;
+    $isLocal = false;
 
     if($isLocal)
     {
